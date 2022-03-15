@@ -1,4 +1,11 @@
 # data-structures-and-algorithms
 
 **array-reverse**
-![](DataStructuresWhiteboard.png)
+![](array-reverse.png)
+
+
+
+| titel  | link        |
+| ---    | ----------- |
+| array-reverse |  [array-reverse](README.md) |
+
