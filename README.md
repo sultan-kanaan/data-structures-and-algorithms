@@ -5,7 +5,5 @@
 
 
 
-| titel  | link        |
-| ---    | ----------- |
-| array-reverse |  [array-reverse](README.md) |
+* [array-reverse](README.md) 
 
