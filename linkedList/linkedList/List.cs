@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace linkedList
 {
-    class List
+    public class List
     {
-        Node Head;
-        Node Tail; 
+        public Node Head;
+        public Node Tail; 
         public List()
         {
             Head = Tail = null;
@@ -132,18 +132,36 @@ namespace linkedList
         }
         public string Tostring()
         {
-            string str = "";
+            string format = "";
             Node current = Head;
             while (current != null)
             {
-                str += $"[ {current.Date} ] -> ";
+                format += $"[ {current.Date} ] -> ";
                 current = current.Next;
             }
 
-            str += "NULL";
-            return str;
+            format += "NULL";
+            return format;
         }
-
+        public bool Include(int value)
+        {
+            Node current = Head;
+            while (current != null)
+            {
+                if (value.Equals(current.Date))
+                {
+                    return true;
+                }
+                current = current.Next;
+            }
+            return false;
+        }
+        public void Insert(int value)
+        {
+            Node newNode = new Node(value);
+            newNode.Next = Head;
+            Head = newNode;
+        }
 
     }
 }

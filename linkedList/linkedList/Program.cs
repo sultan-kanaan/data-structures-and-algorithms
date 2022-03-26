@@ -2,7 +2,7 @@
 
 namespace linkedList
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -20,14 +20,14 @@ namespace linkedList
             //Console.WriteLine(two.Next.Date);
 
             List MyList = new List();
-            MyList.AddEnd(1);
-            MyList.AddEnd(2);
+            //MyList.AddEnd(1);
+            //MyList.AddEnd(2);
             //MyList.AddEnd(4);
             //MyList.AddEnd(5);
             //MyList.AddFirst(0);
             //MyList.AddFirst(4);
             //MyList.AddFirst(5);
-            MyList.AddEnd(0);
+            //MyList.AddEnd(0);
             //MyList.Serche(2);
             //MyList.Remove(0);
             //MyList.Remove(6);
@@ -35,6 +35,9 @@ namespace linkedList
             //MyList.Remove(4);
             var x = MyList.Tostring();
             Console.WriteLine(x);
+            var y = MyList.Include(1);
+            Console.WriteLine(y);
+            MyList.Insert(3);
             MyList.Display();
             }
         }
