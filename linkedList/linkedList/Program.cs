@@ -27,7 +27,7 @@ namespace linkedList
             //MyList.AddFirst(0);
             //MyList.AddFirst(4);
             //MyList.AddFirst(5);
-            //MyList.AddEnd(0);
+            MyList.AddEnd(0);
             //MyList.Serche(2);
             //MyList.Remove(0);
             //MyList.Remove(6);
