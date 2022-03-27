@@ -9,7 +9,9 @@
 * Create insert function to insert data in node in linked list
 * Create include function to search about data in linked list
 * Create toString function to return string
-
+* Create append function to Add in the end
+* Create insertBefore function to Add before specified value
+* Create insertAfter function to Add After specified value
 
 ## Approach & Efficiency
 Big o -> O(1) for all functions
@@ -24,6 +26,13 @@ Big o -> O(1) for all functions
 ```
 "[ a ] -> [ b ] -> [ c ] -> NULL"
 ```
+`append` -> dds a new node with the given value to the end of the list
+
+`insertBefore` -> adds a new node with the given new value immediately before the first node that has the value specified
+
+`insertAfter` -> adds a new node with the given new value immediately before the first node that has the value specified
+
+
 
 # Linked Test
 
@@ -34,4 +43,13 @@ Big o -> O(1) for all functions
 - [x] Test to return true when finding a value within the linked list that exists
 - [x] Test to return false when searching for a value in the linked list that does not exist
 - [x] Test to return a collection of all the values that exist in the linked list
+- [x] Can successfully add a node to the end of the linked list
+- [x] Can successfully add multiple nodes to the end of a linked list
+- [x] Can successfully insert a node before a node located i the middle of a linked list
+- [x] Can successfully insert a node before the first node of a linked list
+- [x] Can successfully insert after a node in the middle of the linked list
+- [x] Can successfully insert a node after the last node of the linked list
+
+
+
 
