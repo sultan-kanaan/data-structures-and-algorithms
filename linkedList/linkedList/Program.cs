@@ -31,13 +31,19 @@ namespace linkedList
             //MyList.Serche(2);
             //MyList.Remove(0);
             //MyList.Remove(6);
-            //MyList.AddAfter(3,2);
+            //MyList.AddAfter(3,1);
             //MyList.Remove(4);
+            //MyList.Insert(2);
+            //MyList.Insert(1);
+            MyList.Append(1);
+            MyList.Append(3);
+            MyList.Append(4);
+            //MyList.InsertBefore(3,2);
+            MyList.InsertAfter(4,2);
+            var y = MyList.Include(3);
+            Console.WriteLine(y);
             var x = MyList.Tostring();
             Console.WriteLine(x);
-            var y = MyList.Include(1);
-            Console.WriteLine(y);
-            MyList.Insert(3);
             MyList.Display();
             }
         }
