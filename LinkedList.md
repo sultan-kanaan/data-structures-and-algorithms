@@ -12,6 +12,7 @@
 * Create append function to Add in the end
 * Create insertBefore function to Add before specified value
 * Create insertAfter function to Add After specified value
+* Create kthFromEnd function to Return the node’s value that is `k`places from the tail of the linked list.
 
 ## Approach & Efficiency
 Big o -> O(1) for all functions
@@ -40,6 +41,9 @@ Big o -> O(1) for all functions
 
 ![](./img/Insert-After.png)
 
+`kthFromEnd` -> Return the node’s value that is `k`places from the tail of the linked list.
+
+![](./img/Kth.png)
 
 # Linked Test
 
@@ -56,6 +60,11 @@ Big o -> O(1) for all functions
 - [x] Can successfully insert a node before the first node of a linked list
 - [x] Can successfully insert after a node in the middle of the linked list
 - [x] Can successfully insert a node after the last node of the linked list
+- [x] Where k is greater than the length of the linked list
+- [x] Where k and the length of the list are the same
+- [x] Where k is not a positive integer
+- [x] Where the linked list is of a size 1
+- [x] “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
 
 
 
