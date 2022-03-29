@@ -144,25 +144,34 @@ namespace linkedList
                 }
             }
         }
-        public void Serche(int value)
+        public void kthFromEnd(int value)
         {
             Node current = Head;
-            int position = 1;
+            int position = 0;
 
-            while(current != null)
+            while (current != null)
             {
-                if(current.Date == value)
+                current = current.Next;
+                position++;
+
+            }
+            int k = position-1;
+            current = Head;
+            while (current != null)
+            {
+                if (current.Date == value)
                 {
-                    Console.WriteLine($"item {value} found at position {position}");
+                    Console.WriteLine($"item {value} found at position {k}");
                     return;
                 }
                 current = current.Next;
-                position++;
-                if(current == null)
+                k--;
+                if (current == null)
                 {
-                    Console.WriteLine("item not found");
+                    Console.WriteLine("Exception");
                 }
             }
+            
         }
         public void Remove(int value)
         {

@@ -25,12 +25,12 @@ namespace linkedList
             //MyList.Remove(6);
             //MyList.Remove(4);
             //MyList.Insert(2);
-            //MyList.Serche(2);
             MyList.Insert(1);
             MyList.Append(3);
             MyList.Append(4);
             MyList.InsertBefore(3, 0);
             MyList.InsertAfter(1, 2);
+            MyList.kthFromEnd(4);
             Console.WriteLine(MyList.Include(3));
             Console.WriteLine(MyList.Tostring());
             //MyList.Display();
