@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\linkedList",
+    "\\linkedList\\linkedList"
   ],
-  "SelectedNode": "\\linkedList.sln",
+  "SelectedNode": "\\linkedList\\linkedList",
   "PreviewInSolutionExplorer": false
 }

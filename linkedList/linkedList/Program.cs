@@ -20,23 +20,20 @@ namespace linkedList
             //Console.WriteLine(two.Next.Date);
 
             List MyList = new List();
-            
+
             //MyList.Remove(0);
             //MyList.Remove(6);
             //MyList.Remove(4);
             //MyList.Insert(2);
             //MyList.Serche(2);
-            ////MyList.Insert(1);
-            ////MyList.Insert(1);
-            ////MyList.Append(3);
-            ////MyList.Append(4);
-            ////MyList.InsertBefore(3,0);
-            ////MyList.InsertAfter(1,2);
-            ////var y = MyList.Include(3);
-            ////Console.WriteLine(y);
-            ////var x = MyList.Tostring();
-            ////Console.WriteLine(x);
-            MyList.Display();
+            MyList.Insert(1);
+            MyList.Append(3);
+            MyList.Append(4);
+            MyList.InsertBefore(3, 0);
+            MyList.InsertAfter(1, 2);
+            Console.WriteLine(MyList.Include(3));
+            Console.WriteLine(MyList.Tostring());
+            //MyList.Display();
             }
         }
 }
