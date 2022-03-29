@@ -23,6 +23,7 @@ Big o -> O(1) for all functions
 `include` -> search about data into linked list.
 
 `Tostring` -> Returns: a string representing all the values in the Linked List, formatted as:
+
 ```
 "[ a ] -> [ b ] -> [ c ] -> NULL"
 ```
