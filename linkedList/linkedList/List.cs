@@ -9,23 +9,26 @@ namespace linkedList
     public class List
     {
         public Node Head;
-        public Node Tail; 
         public List()
         {
-            Head = Tail = null;
+            Head = null;
         }
         public void Append(int value)
         {
             Node item = new Node(value);
+            Node current = Head;
             if (Head == null)
             {
-                Head = item;
-                Tail = item;
+                Insert(value);
+                return;
             }
             else
             {
-                Tail.Next = item;
-                Tail = item;
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                }
+                current.Next = item;
             }
         }
         public void Insert(int value)
@@ -34,7 +37,6 @@ namespace linkedList
             if(Head == null)
             {
                 Head = item;
-                Tail = item;
             }
             else
             {
@@ -62,84 +64,68 @@ namespace linkedList
         public void InsertBefore(int value, int newValue)
         {
 
-            Node NewNode = new Node(value);
+            Node NewNode = new Node(newValue);
             if (Head == null)
             {
                 Console.WriteLine("List is empty");
             }
-            if (Head.Date == value)
+            Node Current = Head;
+
+            if (Current.Date == value)
             {
-                NewNode.Next = Head;
-                Head= NewNode;
-                NewNode.Date = newValue;
+                Insert(newValue);
                 return;
             }
 
-            Node previous = Head;
-            Node current = Head.Next;
-            while (current != null)
+            while (Current.Next != null)
             {
-
-                if (current.Date == value)
+                if (Current.Next.Date == value)
                 {
-                    NewNode.Date = newValue;
-                    previous.Next = NewNode;
-                    NewNode.Next = current;
-                    if (NewNode.Next == null)
-                    {
-                        Tail = NewNode;
-                    }
+                    NewNode.Next = Current.Next;
+                    Current.Next = NewNode;
                     return;
                 }
-                previous = previous.Next;
-                current = current.Next;
+                else
+                {
+                    Current = Current.Next;
+                }
             }
-            if (current == null)
-            {
-                Console.WriteLine("not found!");
-            }
-
         }
+            
+
+        
 
         public void InsertAfter(int value, int newValue)
         {
 
-            Node NewNode = new Node(value);
             if (Head == null)
             {
                 Console.WriteLine("List is empty");
             }
-            if (Tail.Date == value)
-            {
-                NewNode.Next = null;
-                Tail.Next = NewNode;
-                NewNode.Date = newValue;
-                return;
-            }
+            
+            Node Current = Head;
 
-            Node next = Head.Next;
-            Node current = Head;
-            while (current != null)
+            while (Current.Next != null)
             {
-
-                if (current.Date == value)
+                if (Current.Date == value)
                 {
-                    current.Next = NewNode;
-                    NewNode.Date = newValue;
-                    NewNode.Next = next;
-                    if (NewNode.Next == null)
-                    {
-                        Tail = NewNode;
-                    }
+                    Node node = new Node(newValue);
+                    node.Next = Current.Next;
+                    Current.Next = node;
                     return;
                 }
-                next = next.Next;
-                current = current.Next;
+                else
+                {
+                    Current = Current.Next;
+                }
             }
-            if (current == null)
+
+            if (Current.Date == value)
             {
-                Console.WriteLine("not found!");
+                Append(newValue);
+                return;
             }
+            
 
         }
         public void Display()
@@ -198,11 +184,11 @@ namespace linkedList
                 if (current.Date == value)
             {
                 previous.Next = current.Next;
-                    if (previous.Next == null)
-                    {
-                        Tail = previous;
-                    }
-                    return;
+                    //if (previous.Next == null)
+                    //{
+                    //    Tail = previous;
+                    //}
+                    //return;
             }
                 previous = previous.Next;
                 current = current.Next;

@@ -30,3 +30,19 @@ C:\Users\USER\Source\Repos\sultan-kanaan\data-structures-and-algorithms\linkedLi
 C:\Users\USER\Source\Repos\sultan-kanaan\data-structures-and-algorithms\linkedList\linkedList\obj\Debug\net5.0\ref\linkedList.dll
 C:\Users\USER\Source\Repos\sultan-kanaan\data-structures-and-algorithms\linkedList\linkedList\obj\Debug\net5.0\linkedList.pdb
 C:\Users\USER\Source\Repos\sultan-kanaan\data-structures-and-algorithms\linkedList\linkedList\obj\Debug\net5.0\linkedList.genruntimeconfig.cache
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\bin\Debug\net5.0\linkedList.exe
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\bin\Debug\net5.0\linkedList.deps.json
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\bin\Debug\net5.0\linkedList.runtimeconfig.json
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\bin\Debug\net5.0\linkedList.runtimeconfig.dev.json
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\bin\Debug\net5.0\linkedList.dll
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\bin\Debug\net5.0\ref\linkedList.dll
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\bin\Debug\net5.0\linkedList.pdb
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\obj\Debug\net5.0\linkedList.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\obj\Debug\net5.0\linkedList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\obj\Debug\net5.0\linkedList.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\obj\Debug\net5.0\linkedList.AssemblyInfo.cs
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\obj\Debug\net5.0\linkedList.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\obj\Debug\net5.0\linkedList.dll
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\obj\Debug\net5.0\ref\linkedList.dll
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\obj\Debug\net5.0\linkedList.pdb
+C:\Users\USER\Desktop\New folder\linkedList\linkedList\obj\Debug\net5.0\linkedList.genruntimeconfig.cache

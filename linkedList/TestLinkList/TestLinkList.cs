@@ -85,7 +85,9 @@ namespace TestLinkList
         {
             List MyList = new List();
             MyList.Append(5);
-            Assert.Equal(5, MyList.Tail.Date);
+            //Assert.Equal(5, MyList.Tail.Date);
+            Assert.True(MyList.Head.Date == 5);
+
         }
 
         // Can successfully add multiple nodes to the end of a linked list
@@ -93,10 +95,16 @@ namespace TestLinkList
         public void AddmultipleEnd()
         {
             List MyList = new List();
-            MyList.Append(3);
-            MyList.Append(4);
+            MyList.Insert(3);
+            MyList.Insert(4);
             MyList.Append(5);
-            Assert.Equal(5, MyList.Tail.Date);
+            while (MyList.Head.Next != null)
+            {
+                MyList.Head = MyList.Head.Next;
+            }
+
+            Assert.Equal(5, MyList.Head.Date);
+
         }
 
         // Can successfully insert a node before a node located i the middle of a linked list
@@ -125,8 +133,9 @@ namespace TestLinkList
         {
             List MyList = new List();
             MyList.Insert(1);
-            MyList.InsertAfter(1, 2);
-            Assert.Equal(1, MyList.Tail.Date);
+            MyList.Insert(3);
+            MyList.InsertAfter(3, 2);
+            Assert.Equal(2, MyList.Head.Next.Date);
         }
 
         // Can successfully insert a node after the last node of the linked list
@@ -136,7 +145,7 @@ namespace TestLinkList
             List MyList = new List();
             MyList.Insert(1);
             MyList.InsertAfter(1, 2);
-            Assert.Equal(1, MyList.Tail.Date);
+            Assert.Equal(2, MyList.Head.Next.Date);
         }
 
     }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Source\\Repos\\sultan-kanaan\\data-structures-and-algorithms\\linkedList\\TestLinkList\\TestLinkList.csproj": {}
+    "C:\\Users\\USER\\Desktop\\New folder\\linkedList\\TestLinkList\\TestLinkList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Source\\Repos\\sultan-kanaan\\data-structures-and-algorithms\\linkedList\\linkedList\\linkedList.csproj": {
+    "C:\\Users\\USER\\Desktop\\New folder\\linkedList\\linkedList\\linkedList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Source\\Repos\\sultan-kanaan\\data-structures-and-algorithms\\linkedList\\linkedList\\linkedList.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\New folder\\linkedList\\linkedList\\linkedList.csproj",
         "projectName": "linkedList",
-        "projectPath": "C:\\Users\\USER\\Source\\Repos\\sultan-kanaan\\data-structures-and-algorithms\\linkedList\\linkedList\\linkedList.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\New folder\\linkedList\\linkedList\\linkedList.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Source\\Repos\\sultan-kanaan\\data-structures-and-algorithms\\linkedList\\linkedList\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\New folder\\linkedList\\linkedList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\USER\\Source\\Repos\\sultan-kanaan\\data-structures-and-algorithms\\linkedList\\TestLinkList\\TestLinkList.csproj": {
+    "C:\\Users\\USER\\Desktop\\New folder\\linkedList\\TestLinkList\\TestLinkList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Source\\Repos\\sultan-kanaan\\data-structures-and-algorithms\\linkedList\\TestLinkList\\TestLinkList.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\New folder\\linkedList\\TestLinkList\\TestLinkList.csproj",
         "projectName": "TestLinkList",
-        "projectPath": "C:\\Users\\USER\\Source\\Repos\\sultan-kanaan\\data-structures-and-algorithms\\linkedList\\TestLinkList\\TestLinkList.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\New folder\\linkedList\\TestLinkList\\TestLinkList.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Source\\Repos\\sultan-kanaan\\data-structures-and-algorithms\\linkedList\\TestLinkList\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\New folder\\linkedList\\TestLinkList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\USER\\Source\\Repos\\sultan-kanaan\\data-structures-and-algorithms\\linkedList\\linkedList\\linkedList.csproj": {
-                "projectPath": "C:\\Users\\USER\\Source\\Repos\\sultan-kanaan\\data-structures-and-algorithms\\linkedList\\linkedList\\linkedList.csproj"
+              "C:\\Users\\USER\\Desktop\\New folder\\linkedList\\linkedList\\linkedList.csproj": {
+                "projectPath": "C:\\Users\\USER\\Desktop\\New folder\\linkedList\\linkedList\\linkedList.csproj"
               }
             }
           }
