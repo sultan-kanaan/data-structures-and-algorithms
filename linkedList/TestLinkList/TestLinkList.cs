@@ -45,7 +45,7 @@ namespace TestLinkList
             MyList.Insert(7);
             MyList.Insert(10);
             Assert.True(MyList.Include(5));
-          
+
         }
 
 
@@ -113,7 +113,7 @@ namespace TestLinkList
         {
             List MyList = new List();
             MyList.Append(2);
-            MyList.InsertBefore(2,3);
+            MyList.InsertBefore(2, 3);
             Assert.Equal(3, MyList.Head.Date);
         }
 
@@ -146,6 +146,29 @@ namespace TestLinkList
             MyList.Insert(1);
             MyList.InsertAfter(1, 2);
             Assert.Equal(2, MyList.Head.Next.Date);
+        }
+
+        // Where k is greater than the length of the linked list
+        [Fact]
+        public void Exception()
+        {
+         List MyList = new List();
+            MyList.Insert(1);
+            MyList.kthFromEnd(2);
+            bool isKHrer = MyList.Head.Date == 2;
+            Assert.False(isKHrer);
+
+        }
+        // Where k and the length of the list are the same
+        [Fact]
+        public void Wherek()
+        {
+            List MyList = new List();
+            MyList.Insert(1);
+            MyList.Append(2);
+            MyList.kthFromEnd(2);
+            bool WhereK = MyList.Head.Next.Date == 2;
+            Assert.True(WhereK);
         }
 
     }
