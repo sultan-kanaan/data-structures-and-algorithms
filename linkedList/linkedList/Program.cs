@@ -30,7 +30,7 @@ namespace linkedList
             MyList.Append(4);
             MyList.InsertBefore(3, 0);
             MyList.InsertAfter(1, 2);
-            MyList.kthFromEnd(4);
+            MyList.kthFromEnd(3);
             Console.WriteLine(MyList.Include(3));
             Console.WriteLine(MyList.Tostring());
             //MyList.Display();
