@@ -23,15 +23,22 @@ Big o -> O(1) for all functions
 `include` -> search about data into linked list.
 
 `Tostring` -> Returns: a string representing all the values in the Linked List, formatted as:
+
 ```
 "[ a ] -> [ b ] -> [ c ] -> NULL"
 ```
 `append` -> dds a new node with the given value to the end of the list
 
+![](./img/Append.png)
+
 `insertBefore` -> adds a new node with the given new value immediately before the first node that has the value specified
+
+
+![](./img/Insert-before.png)
 
 `insertAfter` -> adds a new node with the given new value immediately before the first node that has the value specified
 
+![](./img/Insert-After.png)
 
 
 # Linked Test
