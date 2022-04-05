@@ -155,8 +155,8 @@ namespace TestLinkList
          List MyList = new List();
             MyList.Insert(1);
             MyList.kthFromEnd(2);
-            bool isKHrer = MyList.Head.Date == 2;
-            Assert.False(isKHrer);
+            bool isKHere = MyList.Head.Date == 2;
+            Assert.False(isKHere);
 
         }
         // Where k and the length of the list are the same
@@ -169,6 +169,42 @@ namespace TestLinkList
             MyList.kthFromEnd(2);
             bool WhereK = MyList.Head.Next.Date == 2;
             Assert.True(WhereK);
+        }
+
+        // 
+        [Fact]
+        public void TestZip()
+        {
+            List MyList = new List();
+            List list1 = new List();
+            list1.Insert(30);
+            list1.Insert(10);
+            List list2 = new List();
+            list2.Insert(40);
+            list2.Insert(20);
+            
+
+           MyList.ZipLists(list1,list2);
+
+            Assert.Equal("[ 10 ] -> [ 20 ] -> [ 30 ] -> [ 40 ] -> NULL",MyList.Tostring());
+        }
+
+        [Fact]
+        public void TestZip2()
+        {
+            List MyList = new List();
+            List list1 = new List();
+            list1.Insert(50);
+            list1.Insert(30);
+            list1.Insert(10);
+            List list2 = new List();
+            list2.Insert(40);
+            list2.Insert(20);
+
+
+            MyList.ZipLists(list1, list2);
+
+            Assert.Equal("[ 10 ] -> [ 20 ] -> [ 30 ] -> [ 40 ] -> [ 50 ] -> NULL", MyList.Tostring());
         }
 
     }

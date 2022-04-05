@@ -193,11 +193,7 @@ namespace linkedList
                 if (current.Date == value)
             {
                 previous.Next = current.Next;
-                    //if (previous.Next == null)
-                    //{
-                    //    Tail = previous;
-                    //}
-                    //return;
+                   
             }
                 previous = previous.Next;
                 current = current.Next;
@@ -235,6 +231,36 @@ namespace linkedList
             return false;
         }
         
+        public List ZipLists(List list1, List list2)
+        {
+            List MyList = new List();
+            Node current1 = list1.Head;
+            Node current2 = list2.Head;
+            int value;
+            while (current1 != null || current2 != null)
+            {
+                if (current1 != null) 
+                {
+                    value = current1.Date;
+                    Append(value);
+                    current1 = current1.Next;
+                }
+                if(current2 != null)
+                {
+                    value = current2.Date;
+                    Append(value);
+                    current2 = current2.Next;
+                }
+
+            }
+            return MyList;
+
+
+
+        }
+
+
+
 
     }
 }
