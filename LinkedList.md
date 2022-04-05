@@ -13,6 +13,7 @@
 * Create insertBefore function to Add before specified value
 * Create insertAfter function to Add After specified value
 * Create kthFromEnd function to Return the node’s value that is `k`places from the tail of the linked list.
+* create ziplist function to return two LinkList  
 
 ## Approach & Efficiency
 Big o -> O(1) for all functions
@@ -45,6 +46,11 @@ Big o -> O(1) for all functions
 
 ![](./img/Kth.png)
 
+`ZipLists`-> Return two linklist and output in new linklist
+
+![](./img/linked-list-zip.png)
+
+
 # Linked Test
 
 - [x] Test instantiate an empty linked list
@@ -65,7 +71,8 @@ Big o -> O(1) for all functions
 - [x] Where k is not a positive integer
 - [x] Where the linked list is of a size 1
 - [x] “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
-
+- [x] Can successfully to merge Two LinkList with same length 
+- [x] Can successfully to merge Two LinkList with Defrent lenght 
 
 
 
