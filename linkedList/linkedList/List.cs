@@ -34,7 +34,7 @@ namespace linkedList
         public void Insert(int value)
         {
             Node item = new Node(value);
-            if(Head == null)
+            if (Head == null)
             {
                 Head = item;
             }
@@ -91,9 +91,9 @@ namespace linkedList
                 }
             }
         }
-            
 
-        
+
+
 
         public void InsertAfter(int value, int newValue)
         {
@@ -102,7 +102,7 @@ namespace linkedList
             {
                 Console.WriteLine("List is empty");
             }
-            
+
             Node Current = Head;
 
             while (Current.Next != null)
@@ -125,7 +125,7 @@ namespace linkedList
                 Append(newValue);
                 return;
             }
-            
+
 
         }
         public void Display()
@@ -135,9 +135,9 @@ namespace linkedList
             {
                 Console.WriteLine("List is empty");
             }
-            else 
+            else
             {
-                while(Start != null)
+                while (Start != null)
                 {
                     Console.WriteLine(Start.Date);
                     Start = Start.Next;
@@ -155,7 +155,7 @@ namespace linkedList
                 position++;
 
             }
-            int k = position-1;
+            int k = position - 1;
             current = Head;
             while (current != null)
             {
@@ -171,30 +171,30 @@ namespace linkedList
                     Console.WriteLine("Exception");
                 }
             }
-            
+
         }
         public void Remove(int value)
         {
-          if(Head == null)
+            if (Head == null)
             {
                 Console.WriteLine("List is empty");
             }
-          if(Head.Date == value)
+            if (Head.Date == value)
             {
                 Head = Head.Next;
                 return;
             }
             Node previous = Head;
             Node current = Head.Next;
-            
-            while (current != null )
+
+            while (current != null)
             {
-            
+
                 if (current.Date == value)
-            {
-                previous.Next = current.Next;
-                   
-            }
+                {
+                    previous.Next = current.Next;
+
+                }
                 previous = previous.Next;
                 current = current.Next;
             }
@@ -230,7 +230,7 @@ namespace linkedList
             }
             return false;
         }
-        
+
         public List ZipLists(List list1, List list2)
         {
             List MyList = new List();
@@ -239,13 +239,13 @@ namespace linkedList
             int value;
             while (current1 != null || current2 != null)
             {
-                if (current1 != null) 
+                if (current1 != null)
                 {
                     value = current1.Date;
                     Append(value);
                     current1 = current1.Next;
                 }
-                if(current2 != null)
+                if (current2 != null)
                 {
                     value = current2.Date;
                     Append(value);

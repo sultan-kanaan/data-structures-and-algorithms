@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace linkedList
 {
-    public class Node 
+    public class Node
     {
         int date;
         Node next;
 
-        public int Date 
+        public int Date
         {
             get { return date; }
             set { date = value; }
@@ -19,12 +19,12 @@ namespace linkedList
         public Node Next
         {
             get { return next; }
-            set {next = value; }
+            set { next = value; }
         }
         public Node(int value)
         {
             this.date = value;
-            next = null; 
+            next = null;
         }
     }
 }
