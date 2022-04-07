@@ -8,5 +8,6 @@
 * [array insert shift](array-insert-shift.md)
 * [array-binary-search](array-binary-search.md)
 * [Linked List](LinkedList.md)
+* [Stack And Queue](Stacks%26Queues.md)
 
 
