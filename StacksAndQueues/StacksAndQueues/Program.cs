@@ -4,10 +4,16 @@ namespace StacksAndQueues
 {
    public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("press uparrow to show Stack or \npress DawnArrow to show Queue");
+            ConsoleKeyInfo Key = Console.ReadKey();
+            if (Key.Key == ConsoleKey.UpArrow)
+            {
+
             Console.WriteLine("==============STACK==============");
+
             Stack stack = new Stack();
             stack.push(5);
             stack.push(6); 
@@ -18,7 +24,12 @@ namespace StacksAndQueues
             Console.WriteLine(stack.peek());
             Console.WriteLine(stack.Print());
             Console.WriteLine("");
-            Console.ForegroundColor = ConsoleColor.Yellow;
+                Main();
+            }
+            if (Key.Key == ConsoleKey.DownArrow)
+            {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow; 
             Console.WriteLine("==============QUEUE==============");
             Queue queue = new Queue();
             queue.Enqueue(1);
@@ -28,7 +39,13 @@ namespace StacksAndQueues
             Console.WriteLine(queue.IsEmpty());
             Console.WriteLine(queue.Peek());
             Console.WriteLine(queue.Print());
-
+            }
+            else
+            {
+            Stack stack = new Stack();
+            stack.Sultan();
+            }
+            Console.Beep();
             Console.ReadLine();
         }
     }

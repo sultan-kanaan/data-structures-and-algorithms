@@ -88,5 +88,10 @@ namespace StacksAndQueues
 
             return Format;
         }
+        public void Sultan()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine("\nCode By Sultan Kanaan");
+        }
     }
 }
