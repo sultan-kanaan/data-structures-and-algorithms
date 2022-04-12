@@ -40,7 +40,7 @@ namespace StacksAndQueues
         {
             if (Front == null)
             {
-                Console.WriteLine("Queue is empty");
+                throw new Exception("Queue is empty");
             }
             else
             {
@@ -56,7 +56,7 @@ namespace StacksAndQueues
         {
             if (Front == null)
             {
-                return "Queue is empty";
+                throw new Exception("Queue is empty");
             }
             else
                 return $"peek is {Front.Value}";

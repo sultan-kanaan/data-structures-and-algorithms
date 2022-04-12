@@ -37,7 +37,7 @@ namespace StacksAndQueues
         {
             if (One.Top == null)
             {
-                Console.WriteLine("Stack One Is Empty !");
+                throw new Exception("Stack One Is Empty !");
             }
             else
             {
@@ -50,7 +50,7 @@ namespace StacksAndQueues
 
             if (One.Top == null)
             {
-                return "Stack One Is Empty !";
+                throw new Exception("Stack One Is Empty !");
             }
             else
             {

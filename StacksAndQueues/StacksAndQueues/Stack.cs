@@ -39,11 +39,12 @@ namespace StacksAndQueues
             else
                 return false;
         }
-        public void pop()
+        public int pop()
         {
             if (Top == null)
             {
-                Console.WriteLine("Stack is empty");
+                throw new Exception("Stack is empty");
+                return -1;
             }
             else
             {
@@ -52,6 +53,7 @@ namespace StacksAndQueues
                 temp.Next = null;
                 count--;
                 Console.WriteLine($"{temp.Value} is deleted");
+                return temp.Value;
             }
         }
         public string peek()
@@ -59,7 +61,7 @@ namespace StacksAndQueues
 
             if (Top == null)
             {
-                return "Stack is empty";
+                throw new Exception("Stack is empty");
             }
             else
             {
