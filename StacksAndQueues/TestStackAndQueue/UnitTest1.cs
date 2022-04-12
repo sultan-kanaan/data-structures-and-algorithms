@@ -140,5 +140,27 @@ namespace TestStackAndQueue
             Assert.Equal("Queue is empty", queue.Peek());
 
         }
+
+        
+        [Fact]
+        public void TestPseudoEnqueue()
+        {
+            PseudoQueue pseudo = new PseudoQueue();
+            pseudo.Enqueue(5);
+
+            Assert.Equal("peek is 5", pseudo.peek());
+        }
+
+        [Fact]
+        public void TestPseudoDequeue()
+        {
+            PseudoQueue pseudo = new PseudoQueue();
+            pseudo.Enqueue(5);
+            pseudo.Enqueue(10);
+            pseudo.Dequeue();
+
+
+            Assert.Equal("peek is 10", pseudo.peek());
+        }
     }
 }
