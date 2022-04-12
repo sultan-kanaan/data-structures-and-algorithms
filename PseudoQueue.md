@@ -30,3 +30,63 @@ And after you Click `RightArrow`
 * Enqueue() - Big O Time = O(1), Space = O(1): This approach uses just a simple push() call to imitate an Enqueue(), thus no node traversal is need and Big O time and space is O(1).
 
 * Dequeue() - Big O Time = O(n), Space = O(n): For Dequeue(), temporary stacks are used to move, flip, and reassign the stack minus the dequeued node, using while loops and pop() to transfer nodes to each stack, then using a temp integer to store and return the dequeued node's value
+
+## Solution
+```
+public class PseudoQueue
+    {
+        public Stack One = new Stack();
+        public Stack Two = new Stack();
+
+        public void Enqueue(int value)
+        {
+            if (One.Top == null)
+            {
+                One.push(value);
+            }
+            else
+            {
+                while (One.Top != null)
+                {
+                    Two.push(One.pop());
+                }
+                One.push(value);
+                while (Two.Top != null)
+                {
+                    One.push(Two.pop());
+                }
+            }
+            Console.WriteLine(One.Print());
+            
+        }
+
+        public void Dequeue()
+        {
+            if (One.Top == null)
+            {
+                throw new Exception("Stack One Is Empty !");
+            }
+            else
+            {
+                One.pop();
+            }
+
+        }
+        public string peek()
+        {
+
+            if (One.Top == null)
+            {
+                throw new Exception("Stack One Is Empty !");
+            }
+            else
+            {
+
+                return $"peek is {One.Top.Value}";
+            }
+        }
+    }
+```
+
+## Whiteboard Process
+![](./img/W11.png)
