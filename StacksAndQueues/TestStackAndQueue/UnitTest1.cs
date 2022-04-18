@@ -132,15 +132,6 @@ namespace TestStackAndQueue
             Assert.True(queue.IsEmpty());
         }
 
-        //Calling dequeue or peek on empty queue raises exception
-        [Fact]
-        public void TestExceptionQ()
-        {
-            Queue queue = new Queue();
-            Assert.Equal("Queue is empty", queue.Peek());
-
-        }
-
         
         [Fact]
         public void TestPseudoEnqueue()
@@ -162,5 +153,38 @@ namespace TestStackAndQueue
 
             Assert.Equal("peek is 10", pseudo.peek());
         }
+        [Fact]
+        public void TestShelterEnqueue()
+        {
+            AnimalShelter animalShelter = new AnimalShelter();
+            Dog dog1 = new Dog();
+            Dog dog2 = new Dog();
+            Cat cat1 = new Cat();
+            animalShelter.Enqueue(dog1);
+            animalShelter.Enqueue(dog2);
+            animalShelter.Enqueue(cat1);
+
+            Assert.Equal(cat1, animalShelter.Dequeue("cat"));
+
+        }
+
+        [Fact]
+        public void TestShelterDequeue()
+        {
+            AnimalShelter animalShelter = new AnimalShelter();
+            Dog dog1 = new Dog();
+            Dog dog2 = new Dog();
+            Cat cat1 = new Cat();
+            animalShelter.Enqueue(dog1);
+            animalShelter.Enqueue(dog2);
+            animalShelter.Enqueue(cat1);
+
+
+            Assert.NotEqual(dog2, animalShelter.Dequeue("cat"));
+
+
+        }
+
+
     }
 }

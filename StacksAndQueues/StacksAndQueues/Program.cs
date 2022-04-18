@@ -8,7 +8,7 @@ namespace StacksAndQueues
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
 
-            Console.WriteLine("press uparrow to show Stack  \npress DawnArrow to show Queue\npress RightArrow to show PseudoQueue ");
+            Console.WriteLine("press uparrow to show Stack  \npress DawnArrow to show Queue\npress RightArrow to show PseudoQueue\npress LeftArrow to show animalShelter ");
             ConsoleKeyInfo Key = Console.ReadKey();
             if (Key.Key == ConsoleKey.UpArrow)
             { 
@@ -55,9 +55,27 @@ namespace StacksAndQueues
              pseudoQueue.Enqueue(10);
              pseudoQueue.Dequeue();
              Console.WriteLine(pseudoQueue.peek());
+                Main();
+
             }
+            if (Key.Key == ConsoleKey.LeftArrow)
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                Console.WriteLine("==============ANIMAL SHELTER==============");
+                AnimalShelter animalShelter = new AnimalShelter();
+                Dog dog1 = new Dog();
+                Dog dog2 = new Dog();
+                Cat cat1 = new Cat();
+                animalShelter.Enqueue(dog1);
+                animalShelter.Enqueue(dog2);
+                animalShelter.Enqueue(cat1);
+                Console.WriteLine(animalShelter.Dequeue("dog"));
+            }
+
             else
              {
+             
             Stack stack = new Stack();
             stack.Sultan();
             }
