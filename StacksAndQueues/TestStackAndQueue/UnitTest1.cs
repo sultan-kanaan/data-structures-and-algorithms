@@ -185,6 +185,25 @@ namespace TestStackAndQueue
 
         }
 
+        [Theory]
+        [InlineData("{}")]
+        [InlineData("{}(){}")]
+        [InlineData("()[[]]")]
+        [InlineData("(){}[[]]")]
+        [InlineData("{}{}[](())")]
+        public void TestTrueOutCome(string input)
+        {
+            Assert.True(Program.BracketValidation(input));
+        }
+        [Theory]
+        [InlineData("[({}]")]
+        [InlineData("(](")]
+        [InlineData("{(})")]
+        public void TestFalseOutCome(string input)
+        {
+            Assert.False(Program.BracketValidation(input));
+        }
+
 
     }
 }
