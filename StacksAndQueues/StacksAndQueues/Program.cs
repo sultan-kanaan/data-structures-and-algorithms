@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace StacksAndQueues
 {
@@ -8,7 +9,11 @@ namespace StacksAndQueues
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
 
-            Console.WriteLine("press uparrow to show Stack  \npress DawnArrow to show Queue\npress RightArrow to show PseudoQueue\npress LeftArrow to show animalShelter ");
+            Console.WriteLine("press uparrow to show Stack  " +
+                "\npress DawnArrow to show Queue" +
+                "\npress RightArrow to show PseudoQueue" +
+                "\npress LeftArrow to show animalShelter" +
+                "\npress Enter to show Bracket Validation ");
             ConsoleKeyInfo Key = Console.ReadKey();
             if (Key.Key == ConsoleKey.UpArrow)
             { 
@@ -55,6 +60,7 @@ namespace StacksAndQueues
              pseudoQueue.Enqueue(10);
              pseudoQueue.Dequeue();
              Console.WriteLine(pseudoQueue.peek());
+             Console.WriteLine("");
                 Main();
 
             }
@@ -71,16 +77,79 @@ namespace StacksAndQueues
                 animalShelter.Enqueue(dog2);
                 animalShelter.Enqueue(cat1);
                 Console.WriteLine(animalShelter.Dequeue("dog"));
+                Console.WriteLine("");
+                Main();
+            }
+            if (Key.Key == ConsoleKey.Enter)
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("==============Bracket Validation==============");
+                Console.Write("()(}{}[] : ");
+                Console.WriteLine(BracketValidation("()(}{}[]"));
+                
+                Console.Write("()(){}[] : ");
+                Console.WriteLine(BracketValidation("()(){}[]"));
+                
+                Console.Write("()(}{)}[] : ");
+                Console.WriteLine(BracketValidation("()(}{)}[]"));
+                
+                Console.Write("() : ");
+                Console.WriteLine(BracketValidation("()"));
+                
+                Console.Write("(}: ");
+                Console.WriteLine(BracketValidation("(}"));
             }
 
             else
-             {
-             
+            {
             Stack stack = new Stack();
             stack.Sultan();
             }
             Console.Beep();
             Console.ReadLine();
+        }
+        
+        public static bool BracketValidation(string input)
+        {
+
+            Stack<char> Brackets = new Stack<char>();
+            foreach (char item in input.ToCharArray())
+            {
+            switch (item)
+                {
+                    case '(':
+                    case '{':
+                    case '[':
+                        Brackets.Push(item);
+                        break;
+                    case ')':
+                        if (Brackets.Pop() != '(')
+                        {
+                            return false;
+                        }
+                        break;
+                    case '}':
+                        if (Brackets.Pop() != '{')
+                        {
+                            return false;
+                        }
+                        break;
+                    case ']':
+                        if (Brackets.Pop() != '[')
+                        {
+                            return false;
+                        }
+                        break;
+                }
+            
+            }
+            if (Brackets.Count == 0)
+            {
+                return true;
+            }
+            else
+                return false;
         }
     }
 }
