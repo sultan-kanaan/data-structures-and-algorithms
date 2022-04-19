@@ -11,6 +11,7 @@
 * [Stack And Queue](Stacks%26Queues.md)
 * [PseudoQueue](PseudoQueue.md)
 * [AnimalShelter](./AnimalShelter.md)
+* [Bracket Validation](./BracketValidation.md)
 
 
 
