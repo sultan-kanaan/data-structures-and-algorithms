@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees", "Trees\Trees.csproj", "{1A6BC45E-60F3-4633-9F33-1185D026B885}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTree", "TestTree\TestTree.csproj", "{8D5DE72C-3C81-4F5E-A715-B56D4AD44A21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A6BC45E-60F3-4633-9F33-1185D026B885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A6BC45E-60F3-4633-9F33-1185D026B885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A6BC45E-60F3-4633-9F33-1185D026B885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A6BC45E-60F3-4633-9F33-1185D026B885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D5DE72C-3C81-4F5E-A715-B56D4AD44A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5DE72C-3C81-4F5E-A715-B56D4AD44A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5DE72C-3C81-4F5E-A715-B56D4AD44A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5DE72C-3C81-4F5E-A715-B56D4AD44A21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2ECDB42D-109F-459F-8068-BF423B247219}
+	EndGlobalSection
+EndGlobal

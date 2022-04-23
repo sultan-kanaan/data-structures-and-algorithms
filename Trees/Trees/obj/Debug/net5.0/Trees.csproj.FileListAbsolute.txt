@@ -1,0 +1,16 @@
+C:\Users\USER\source\repos\Trees\Trees\bin\Debug\net5.0\Trees.exe
+C:\Users\USER\source\repos\Trees\Trees\bin\Debug\net5.0\Trees.deps.json
+C:\Users\USER\source\repos\Trees\Trees\bin\Debug\net5.0\Trees.runtimeconfig.json
+C:\Users\USER\source\repos\Trees\Trees\bin\Debug\net5.0\Trees.runtimeconfig.dev.json
+C:\Users\USER\source\repos\Trees\Trees\bin\Debug\net5.0\Trees.dll
+C:\Users\USER\source\repos\Trees\Trees\bin\Debug\net5.0\ref\Trees.dll
+C:\Users\USER\source\repos\Trees\Trees\bin\Debug\net5.0\Trees.pdb
+C:\Users\USER\source\repos\Trees\Trees\obj\Debug\net5.0\Trees.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\Trees\Trees\obj\Debug\net5.0\Trees.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\source\repos\Trees\Trees\obj\Debug\net5.0\Trees.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\Trees\Trees\obj\Debug\net5.0\Trees.AssemblyInfo.cs
+C:\Users\USER\source\repos\Trees\Trees\obj\Debug\net5.0\Trees.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\Trees\Trees\obj\Debug\net5.0\Trees.dll
+C:\Users\USER\source\repos\Trees\Trees\obj\Debug\net5.0\ref\Trees.dll
+C:\Users\USER\source\repos\Trees\Trees\obj\Debug\net5.0\Trees.pdb
+C:\Users\USER\source\repos\Trees\Trees\obj\Debug\net5.0\Trees.genruntimeconfig.cache
