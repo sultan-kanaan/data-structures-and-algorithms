@@ -12,7 +12,7 @@
 * [PseudoQueue](PseudoQueue.md)
 * [AnimalShelter](./AnimalShelter.md)
 * [Bracket Validation](./BracketValidation.md)
-
+* [Tree](./Tree.md)
 
 
 
