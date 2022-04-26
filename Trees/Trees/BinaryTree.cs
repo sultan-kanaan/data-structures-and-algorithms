@@ -143,8 +143,15 @@ namespace Trees
                 Console.WriteLine(e.Message);
             }
             return false;
-
-
+        }
+        public int Getmax()
+        {
+            Node current = Root;
+            while (current.Right != null)
+            {
+                current = current.Right;
+            }
+            return current.Value;
         }
     }
 }

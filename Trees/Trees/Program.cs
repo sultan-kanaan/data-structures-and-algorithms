@@ -17,6 +17,7 @@ namespace Trees
             binaryTree.Add(14);
             binaryTree.Add(9);
             binaryTree.Add(9);
+            Console.WriteLine( binaryTree.Getmax());
 
             Console.WriteLine(binaryTree.Contains(0));
             Console.WriteLine(binaryTree.Contains(8));

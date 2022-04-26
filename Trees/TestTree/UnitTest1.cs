@@ -32,7 +32,30 @@ namespace TestTree
 
             Assert.True(binaryTree.Contains(5));
         }
-       
+        [Fact]
+        public void TestGetMax()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+            binaryTree.Add(5);
+            binaryTree.Add(3);
+            binaryTree.Add(2);
+            binaryTree.Getmax();
+
+            Assert.Equal(5,binaryTree.Getmax());
+        }
+        [Fact]
+        public void TestFGetMax()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+            binaryTree.Add(5);
+            binaryTree.Add(3);
+            binaryTree.Add(2);
+            binaryTree.Getmax();
+
+            Assert.NotEqual(4, binaryTree.Getmax());
+        }
+
+
 
 
     }
