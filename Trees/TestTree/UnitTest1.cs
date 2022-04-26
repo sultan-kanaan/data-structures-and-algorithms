@@ -54,6 +54,17 @@ namespace TestTree
 
             Assert.NotEqual(4, binaryTree.Getmax());
         }
+        [Fact]
+        public void TestBreadthFirst()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+            binaryTree.Add(5);
+            binaryTree.Add(3);
+            binaryTree.Add(2);
+            binaryTree.BreadthFirst();
+
+            Assert.Equal(5, binaryTree.Root.Value);
+        }
 
 
 

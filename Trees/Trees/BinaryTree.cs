@@ -153,5 +153,29 @@ namespace Trees
             }
             return current.Value;
         }
+       
+        public void BreadthFirst()
+        {
+            BreadthFirst(Root);
+        }
+        private void BreadthFirst(Node root)
+        {
+            Queue<Node> queue = new Queue<Node>();
+
+            queue.Enqueue(root);
+
+            while (queue.Count != 0)
+            {
+                Node node = queue.Dequeue();
+
+                if (node.Left != null)
+                    queue.Enqueue(node.Left);
+                if (node.Right != null)
+                    queue.Enqueue(node.Right);
+
+                Console.Write($"{ node.Value},");
+            }
+
+        }
     }
 }
