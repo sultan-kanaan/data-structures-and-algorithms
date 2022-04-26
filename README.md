@@ -13,6 +13,7 @@
 * [AnimalShelter](./AnimalShelter.md)
 * [Bracket Validation](./BracketValidation.md)
 * [Tree](./Tree.md)
+* [Max Tree](./MaxTree.md)
 
 
 
