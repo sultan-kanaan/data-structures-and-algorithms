@@ -9,6 +9,8 @@ namespace Trees
     public class BinaryTree
     {
         public Node Root;
+        public List<int> Tree = new List<int>();
+
 
         public BinaryTree()
         {
@@ -55,7 +57,7 @@ namespace Trees
             }
 
         }
-        public void PreOrder()
+        public List<int> PreOrder()
         {
             try
             {
@@ -65,19 +67,23 @@ namespace Trees
             {
                 Console.WriteLine(e.Message);
             }
+            return Tree;
 
         }
-        private void PreOrder(Node node)
+        private List<int> PreOrder(Node node)
         {
             if (node != null)
             {
+                Tree.Add(node.Value);
                 Console.Write($"{ node.Value},");
                 PreOrder(node.Left);
                 PreOrder(node.Right);
+                
             }
+            return Tree;
 
         }
-        public void InOrder()
+        public List<int> InOrder()
         {
             try
             {
@@ -87,17 +93,20 @@ namespace Trees
             {
                 Console.WriteLine(e.Message);
             }
+            return Tree;
         }
-        private void InOrder(Node node)
+        private List<int> InOrder(Node node)
         {
             if (node != null)
             {
                 InOrder(node.Left);
-                Console.Write($"{ node.Value},");
+                Tree.Add(node.Value);
+                //Console.Write($"{ node.Value},");
                 InOrder(node.Right);
             }
+            return Tree;
         }
-        public void PostOrder()
+        public List<int> PostOrder()
         {
             try
             {
@@ -107,15 +116,18 @@ namespace Trees
             {
                 Console.WriteLine(e.Message);
             }
+            return Tree;
         }
-        private void PostOrder(Node node)
+        private List<int> PostOrder(Node node)
         {
             if (node != null)
             {
                 PostOrder(node.Left);
                 PostOrder(node.Right);
+                Tree.Add(node.Value);
                 Console.Write($"{ node.Value},");
             }
+            return Tree;
         }
         public bool Contains(int value)
         {
@@ -154,14 +166,15 @@ namespace Trees
             return current.Value;
         }
        
-        public void BreadthFirst()
+        public List<int> BreadthFirst()
         {
             BreadthFirst(Root);
+            return Tree;
         }
-        private void BreadthFirst(Node root)
+        
+        private List<int> BreadthFirst(Node root)
         {
             Queue<Node> queue = new Queue<Node>();
-
             queue.Enqueue(root);
 
             while (queue.Count != 0)
@@ -169,12 +182,17 @@ namespace Trees
                 Node node = queue.Dequeue();
 
                 if (node.Left != null)
+                {
                     queue.Enqueue(node.Left);
+                }
                 if (node.Right != null)
+                {
                     queue.Enqueue(node.Right);
-
+                }
+                Tree.Add(node.Value);
                 Console.Write($"{ node.Value},");
             }
+            return Tree;
 
         }
     }
