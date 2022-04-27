@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using Trees;
+using System.Collections.Generic;
 
 namespace TestTree
 {
@@ -61,9 +62,34 @@ namespace TestTree
             binaryTree.Add(5);
             binaryTree.Add(3);
             binaryTree.Add(2);
-            binaryTree.BreadthFirst();
-
-            Assert.Equal(5, binaryTree.Root.Value);
+            Assert.Equal(new List<int> { 5, 3, 2 }, binaryTree.BreadthFirst());
+        }
+        [Fact]
+        public void TestInOrder()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+            binaryTree.Add(5);
+            binaryTree.Add(3);
+            binaryTree.Add(2);
+            Assert.Equal(new List<int> { 2, 3, 5 }, binaryTree.InOrder());
+        }
+        [Fact]
+        public void TestPreOrder()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+            binaryTree.Add(5);
+            binaryTree.Add(3);
+            binaryTree.Add(2);
+            Assert.Equal(new List<int> { 5, 3, 2 }, binaryTree.PreOrder());
+        }
+        [Fact]
+        public void TestPostOrder()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+            binaryTree.Add(5);
+            binaryTree.Add(3);
+            binaryTree.Add(2);
+            Assert.Equal(new List<int> { 2, 3, 5 }, binaryTree.PostOrder());
         }
 
 

@@ -18,23 +18,32 @@ namespace Trees
             binaryTree.Add(9);
             binaryTree.Add(9);
 
+
             Console.Write("The Maximum Element Is : ");
             Console.WriteLine( binaryTree.Getmax());
 
             Console.WriteLine(binaryTree.Contains(0));
             Console.WriteLine(binaryTree.Contains(8));
 
+            binaryTree.Tree.Clear();
             Console.Write("BreadthFirst : ");
             binaryTree.BreadthFirst();
 
+            binaryTree.Tree.Clear();
             Console.WriteLine();
             Console.Write("PreOrder : ");
             binaryTree.PreOrder();
 
+            binaryTree.Tree.Clear();
             Console.WriteLine();
             Console.Write("InOrder : ");
-            binaryTree.InOrder();
+            var InOrder = binaryTree.InOrder();
+            foreach (var item in InOrder)
+            {
+                Console.Write($"{item},");
+            }
 
+            binaryTree.Tree.Clear();
             Console.WriteLine();
             Console.Write("PostOrder : ");
             binaryTree.PostOrder();
