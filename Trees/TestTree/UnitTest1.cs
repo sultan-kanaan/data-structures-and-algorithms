@@ -62,7 +62,7 @@ namespace TestTree
             binaryTree.Add(5);
             binaryTree.Add(3);
             binaryTree.Add(2);
-            Assert.Equal(new List<int> { 5, 3, 2 }, binaryTree.BreadthFirst());
+            Assert.Equal(new List<object> { 5, 3, 2 }, binaryTree.BreadthFirst());
         }
         [Fact]
         public void TestInOrder()
@@ -71,7 +71,7 @@ namespace TestTree
             binaryTree.Add(5);
             binaryTree.Add(3);
             binaryTree.Add(2);
-            Assert.Equal(new List<int> { 2, 3, 5 }, binaryTree.InOrder());
+            Assert.Equal(new List<object> { 2, 3, 5 }, binaryTree.InOrder());
         }
         [Fact]
         public void TestPreOrder()
@@ -80,7 +80,7 @@ namespace TestTree
             binaryTree.Add(5);
             binaryTree.Add(3);
             binaryTree.Add(2);
-            Assert.Equal(new List<int> { 5, 3, 2 }, binaryTree.PreOrder());
+            Assert.Equal(new List<object> { 5, 3, 2 }, binaryTree.PreOrder());
         }
         [Fact]
         public void TestPostOrder()
@@ -89,8 +89,53 @@ namespace TestTree
             binaryTree.Add(5);
             binaryTree.Add(3);
             binaryTree.Add(2);
-            Assert.Equal(new List<int> { 2, 3, 5 }, binaryTree.PostOrder());
+            Assert.Equal(new List<object> { 2, 3, 5 }, binaryTree.PostOrder());
         }
+        [Fact]
+        public void TestReturnsFizz()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+
+            binaryTree.Add(3);
+
+            object[] result = binaryTree.FizzBuzzTree();
+
+            Assert.Equal("Fizz", result[0]);
+        }
+        [Fact]
+        public void TestReturnsBuzz()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+
+            binaryTree.Add(5);
+
+            object[] result = binaryTree.FizzBuzzTree();
+
+            Assert.Equal("Buzz", result[0]);
+        }
+        [Fact]
+        public void TestReturnsFizzBuzz()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+
+            binaryTree.Add(15);
+
+            object[] result = binaryTree.FizzBuzzTree();
+
+            Assert.Equal("FizzBuzz", result[0]);
+        }
+        [Fact]
+        public void TestReturnsNum()
+        {
+            BinaryTree binaryTree = new BinaryTree();
+
+            binaryTree.Add(8);
+
+            object[] result = binaryTree.FizzBuzzTree();
+
+            Assert.Equal(8, result[0]);
+        }
+
 
 
 

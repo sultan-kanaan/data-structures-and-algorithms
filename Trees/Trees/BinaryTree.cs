@@ -9,7 +9,7 @@ namespace Trees
     public class BinaryTree
     {
         public Node Root;
-        public List<int> Tree = new List<int>();
+        public List<object> Tree = new List<object>();
 
 
         public BinaryTree()
@@ -20,7 +20,7 @@ namespace Trees
         {
 
         }
-        public void Add(int value)
+        public void Add(object value)
         {
             if (Root == null)
             {
@@ -31,9 +31,9 @@ namespace Trees
                 AddTo(Root, value);
             }
         }
-        private void AddTo(Node node, int value)
+        private void AddTo(Node node, object value)
         {
-            if (value < node.Value)
+            if ((int)value < (int)node.Value)
             {
                 if (node.Left == null)
                 {
@@ -57,7 +57,7 @@ namespace Trees
             }
 
         }
-        public List<int> PreOrder()
+        public List<object> PreOrder()
         {
             try
             {
@@ -70,7 +70,7 @@ namespace Trees
             return Tree;
 
         }
-        private List<int> PreOrder(Node node)
+        private List<object> PreOrder(Node node)
         {
             if (node != null)
             {
@@ -83,7 +83,7 @@ namespace Trees
             return Tree;
 
         }
-        public List<int> InOrder()
+        public List<object> InOrder()
         {
             try
             {
@@ -95,7 +95,7 @@ namespace Trees
             }
             return Tree;
         }
-        private List<int> InOrder(Node node)
+        private List<object> InOrder(Node node)
         {
             if (node != null)
             {
@@ -106,7 +106,7 @@ namespace Trees
             }
             return Tree;
         }
-        public List<int> PostOrder()
+        public List<object> PostOrder()
         {
             try
             {
@@ -118,7 +118,7 @@ namespace Trees
             }
             return Tree;
         }
-        private List<int> PostOrder(Node node)
+        private List<object> PostOrder(Node node)
         {
             if (node != null)
             {
@@ -129,18 +129,18 @@ namespace Trees
             }
             return Tree;
         }
-        public bool Contains(int value)
+        public bool Contains(object value)
         {
             try
             {
                 Node current = Root;
                 while (current != null)
                 {
-                    if (value > current.Value)
+                    if ((int)value > (int)current.Value)
                     {
                         current = current.Right;
                     }
-                    else if (value < current.Value)
+                    else if ((int)value < (int)current.Value)
                     {
                         current = current.Left;
                     }
@@ -156,7 +156,7 @@ namespace Trees
             }
             return false;
         }
-        public int Getmax()
+        public object Getmax()
         {
             Node current = Root;
             while (current.Right != null)
@@ -166,13 +166,13 @@ namespace Trees
             return current.Value;
         }
        
-        public List<int> BreadthFirst()
+        public List<object> BreadthFirst()
         {
             BreadthFirst(Root);
             return Tree;
         }
         
-        private List<int> BreadthFirst(Node root)
+        private List<object> BreadthFirst(Node root)
         {
             Queue<Node> queue = new Queue<Node>();
             queue.Enqueue(root);
@@ -194,6 +194,46 @@ namespace Trees
             }
             return Tree;
 
+        }
+        public object[] FizzBuzzTree()
+        {
+            return FizzBuzzTree(Root);
+        }
+        private object[] FizzBuzzTree(Node root)
+        {
+
+            try
+            {
+                if ((int)root.Value % 15 == 0)
+                {
+                    root.Value = "FizzBuzz";
+                }
+                else if ((int)root.Value % 3 == 0)
+                {
+                    root.Value = "Fizz";
+                }
+                else if ((int)root.Value % 5 == 0)
+                {
+                    root.Value = "Buzz";
+                }
+
+                Tree.Add(root.Value);
+
+                if (root.Left != null)
+                {
+                    FizzBuzzTree(root.Left);
+                }
+                if (root.Right != null)
+                {
+                    FizzBuzzTree(root.Right);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return Tree.ToArray();
         }
     }
 }

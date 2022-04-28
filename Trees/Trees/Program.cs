@@ -14,7 +14,7 @@ namespace Trees
             binaryTree.Add(10);
             binaryTree.Add(2);
             binaryTree.Add(6);
-            binaryTree.Add(14);
+            binaryTree.Add(15);
             binaryTree.Add(9);
             binaryTree.Add(9);
 
@@ -48,6 +48,14 @@ namespace Trees
             Console.Write("PostOrder : ");
             binaryTree.PostOrder();
 
+            binaryTree.Tree.Clear();
+            Console.WriteLine();
+            Console.Write("FizzBuzzTree : ");
+            var FizzBuzz = binaryTree.FizzBuzzTree();
+            foreach (var item in FizzBuzz)
+            {
+                Console.Write($"{item},");
+            }
             Console.ReadLine();
 
 
