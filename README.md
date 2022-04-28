@@ -14,6 +14,7 @@
 * [Bracket Validation](./BracketValidation.md)
 * [Tree](./Tree.md)
 * [Max Tree](./MaxTree.md)
-
+* [breadth first](./breadthFirst.md)
+* [FizzBuzzTree](./FizzBuzzTree.md)
 
 
