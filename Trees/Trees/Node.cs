@@ -8,7 +8,7 @@ namespace Trees
 {
     public class Node
     {
-        public int Value;
+        public object Value;
         public Node Left;
         public Node Right;
         public Node()
@@ -16,7 +16,7 @@ namespace Trees
 
         }
 
-        public Node(int value)
+        public Node(object value)
         {
             Value = value;
         }
