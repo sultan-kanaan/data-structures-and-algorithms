@@ -20,7 +20,7 @@ namespace Trees
 
 
             Console.Write("The Maximum Element Is : ");
-            Console.WriteLine( binaryTree.Getmax());
+            Console.WriteLine(binaryTree.Getmax());
 
             Console.WriteLine(binaryTree.Contains(0));
             Console.WriteLine(binaryTree.Contains(8));
@@ -60,5 +60,6 @@ namespace Trees
 
 
         }
+       
     }
 }

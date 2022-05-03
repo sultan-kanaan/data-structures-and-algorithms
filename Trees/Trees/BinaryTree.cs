@@ -33,7 +33,7 @@ namespace Trees
         }
         private void AddTo(Node node, object value)
         {
-            if ((int)value < (int)node.Value)
+            if ((int)value <= (int)node.Value)
             {
                 if (node.Left == null)
                 {
@@ -158,14 +158,34 @@ namespace Trees
         }
         public object Getmax()
         {
-            Node current = Root;
-            while (current.Right != null)
-            {
-                current = current.Right;
-            }
-            return current.Value;
+
+           return Getmax(Root);
+
         }
-       
+
+        public object Getmax(Node node)
+        {
+            if (node == null)
+            {
+                return null;
+            }
+
+            object root = node.Value;
+            object left = Getmax(node.Left);
+            object right = Getmax(node.Right);
+
+            if ((int)left > (int)root)
+            {
+                root = left;
+            }
+            if ((int)right > (int)root)
+            {
+                root = right;
+            }
+
+            return root;
+        }
+
         public List<object> BreadthFirst()
         {
             BreadthFirst(Root);
