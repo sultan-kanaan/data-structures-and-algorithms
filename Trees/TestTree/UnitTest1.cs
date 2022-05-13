@@ -20,7 +20,7 @@ namespace TestTree
         {
             BinaryTree binaryTree = new BinaryTree();
             binaryTree.Add(5);
-            Assert.Equal(5,binaryTree.Root.Value);
+            Assert.Equal(5, binaryTree.Root.Value);
         }
         [Fact]
         public void TestContains()
@@ -42,7 +42,7 @@ namespace TestTree
             binaryTree.Add(2);
             binaryTree.Getmax();
 
-            Assert.Equal(5,binaryTree.Getmax());
+            Assert.Equal(5, binaryTree.Getmax());
         }
         [Fact]
         public void TestFGetMax()
@@ -116,6 +116,7 @@ namespace TestTree
         [Fact]
         public void TestReturnsFizzBuzz()
         {
+
             BinaryTree binaryTree = new BinaryTree();
 
             binaryTree.Add(15);
@@ -135,10 +136,23 @@ namespace TestTree
 
             Assert.Equal(8, result[0]);
         }
+        [Fact]
+        public void TestFizzBuzz()
+        {
+            KAryTree tree = new KAryTree();
+            FBNode root = new FBNode("15");
+            root.Children.Add(new FBNode("2"));
+            root.Children.Add(new FBNode("5"));
+            root.Children.Add(new FBNode("21"));
+
+
+            List<string> FizzBuzzTree = tree.FizzBuzzTree(root);
+            Assert.Equal(new List<string>{"FizzBuzz", "2", "Buzz", "Fizz"}, FizzBuzzTree);
 
 
 
 
 
+        }
     }
 }
