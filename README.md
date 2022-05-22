@@ -16,5 +16,6 @@
 * [Max Tree](./MaxTree.md)
 * [breadth first](./breadthFirst.md)
 * [FizzBuzzTree](./FizzBuzzTree.md)
+*[Insertion Sort](./InsertionSort.md)
 
 
