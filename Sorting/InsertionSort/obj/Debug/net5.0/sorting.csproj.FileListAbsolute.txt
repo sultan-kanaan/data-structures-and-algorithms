@@ -1,0 +1,16 @@
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\bin\Debug\net5.0\sorting.exe
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\bin\Debug\net5.0\sorting.deps.json
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\bin\Debug\net5.0\sorting.runtimeconfig.json
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\bin\Debug\net5.0\sorting.runtimeconfig.dev.json
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\bin\Debug\net5.0\sorting.dll
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\bin\Debug\net5.0\ref\sorting.dll
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\bin\Debug\net5.0\sorting.pdb
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\obj\Debug\net5.0\sorting.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\obj\Debug\net5.0\sorting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\obj\Debug\net5.0\sorting.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\obj\Debug\net5.0\sorting.AssemblyInfo.cs
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\obj\Debug\net5.0\sorting.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\obj\Debug\net5.0\sorting.dll
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\obj\Debug\net5.0\ref\sorting.dll
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\obj\Debug\net5.0\sorting.pdb
+C:\Users\USER\source\repos\InsertionSort\InsertionSort\obj\Debug\net5.0\sorting.genruntimeconfig.cache
