@@ -17,5 +17,7 @@
 * [breadth first](./breadthFirst.md)
 * [FizzBuzzTree](./FizzBuzzTree.md)
 * [Insertion Sort](./InsertionSort.md)
+* [Merge Sort](./MergeSort.md)
+
 
 
