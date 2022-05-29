@@ -18,6 +18,7 @@
 * [FizzBuzzTree](./FizzBuzzTree.md)
 * [Insertion Sort](./InsertionSort.md)
 * [Merge Sort](./MergeSort.md)
+* [Quick Sort](./QuickSort.md)
 
 
 

@@ -1,3 +1,5 @@
+[To show BLOG](BLOGM.md)
+
 # Challenge Summary
 Once you are done with your article, code a working, tested implementation of Merge Sort based on the pseudocode provided
 
