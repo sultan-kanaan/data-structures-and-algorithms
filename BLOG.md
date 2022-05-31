@@ -18,40 +18,39 @@ InsertionSort(int[] arr)
 ```      
 
 ## Trace
-Pass 1 :
-arr  => [8,4,23,42,16,15]
+Pass 1 :[ 5, 12, 7, 5, 5, 7 ]
 
 ![](./img/pass1.png)
 
-In the first pass 8>4 => 8 is greater than 4 so swap 4 and 8 let 4 in the temp, then let the value of the second element in the first index, and finally let the second index = temp.
+In the first pass 5>12 => 5 is not greater than 12 so dont swap , we do not move the element 23 and the array stays in the same order.
 
 
 Pass 2 :
 
 ![](./img/pass2.png)
 
-In the second pass 23>8 => 23 is greater than 8 so Don't swap , we do not move the element 23 and the array stays in the same order.
+In the second pass 12>7 => 12 is greater than 7 so swap 7 and 12 in the temp, then let the value of the second element in the first index, and finally let the second index = temp.
 
 
 Pass 3 :
 
 ![](./img/pass3.png)
 
-In the third pass 42>23 => 42 is greater than 23 so Don't swap , we do not move the element 42 and the array stays in the same order.
+In the third pass 12>5 =>12 is greater than 5 so swap 5 and 12 in the temp, then let the value of the second element in the first index, and finally let the second index = temp.
 
 Pass 4 :
 
 ![](./img/pass4.png)
 
-In the fourth pass 16<42&23 => 16 is smaller than 42,23 so insert the element 16 into the previous position until 16>8
-
+In the fourth pass 12>5 =>12 is greater than 5 so swap 5 and 12 in the temp, then let the value of the second element in the first index, and finally let the second index = temp.
 
 Pass 5 :
 
 ![](./img/pass5.png)
 
 
-In the fifth pass 15<42&23&16 => 15 is smaller than 42,23,16 so insert the element 15 into the previous position until 15>8
+In the fifth pass 12>7 => 12 is greater than 7 so swap 7 and 12 in the temp, then let the value of the second element in the first index, and finally let the second index = temp.
+
 
 ## Efficiency
 | | Time | Space |
