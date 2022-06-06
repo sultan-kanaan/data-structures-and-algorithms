@@ -6,7 +6,7 @@ namespace QuickSort
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
         public static int[] QuickSort(int[] arr, int left, int right)
         {
