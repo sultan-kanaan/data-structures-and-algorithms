@@ -20,6 +20,7 @@
 * [Merge Sort](./MergeSort.md)
 * [Quick Sort](./QuickSort.md)
 * [HashTables](./HashTables.md)
+* [repeated word](./repeatedWord.md)
 
 
 
