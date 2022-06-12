@@ -66,5 +66,27 @@ namespace TestHashTables
 
             Assert.InRange(testHashTable.Hash("Test"), 0, 1024);
         }
+
+        [Fact]
+        public void RepeatedWorTestOne()
+        {
+            string testPhrase = "Once upon a time, there was a brave princess who...";
+
+            Assert.Equal("a", Program.RepeatedWord(testPhrase));
+        }
+        [Fact]
+        public void RepeatedWorTestTwo()
+        {
+            string testPhrase = "Hello, World! World! World!";
+
+            Assert.NotEqual("hello", Program.RepeatedWord(testPhrase));
+        }
+        [Fact]
+        public void RepeatedWorTestThree()
+        {
+            string testPhrase = "Hello, World!";
+
+            Assert.Equal("No Repeated Word", Program.RepeatedWord(testPhrase));
+        }
     }
 }
