@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using HashTables;
+using System.Collections.Generic;
 
 namespace TestHashTables
 {
@@ -88,5 +89,26 @@ namespace TestHashTables
 
             Assert.Equal("No Repeated Word", Program.RepeatedWord(testPhrase));
         }
+        [Fact]
+        public void TestLeftJoin()
+        {
+            HashTable left = new HashTable();
+            left.Set("sultan", "250");
+            left.Set("kanaan", "250");
+
+            HashTable right = new HashTable();
+            right.Set("sultan", "400");
+            right.Set("salman", "400");
+
+            List<string> expected = new List<string>();
+            expected.Add("kanaan, 250, NULL");
+            expected.Add("sultan, 250, HashTables.Node");
+
+            List<string> actual = Program.LeftJoin(left, right);
+
+            Assert.Equal(expected, actual);
+        }
+
+
     }
 }
