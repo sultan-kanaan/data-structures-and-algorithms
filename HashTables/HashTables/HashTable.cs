@@ -9,7 +9,7 @@ namespace HashTables
     public class HashTable
     {
         private static int tableSize = 1014;
-        private Node[] Table { get; set; }
+        public Node[] Table { get; set; }
 
         public HashTable()
         {
