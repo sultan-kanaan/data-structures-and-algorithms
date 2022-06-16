@@ -21,6 +21,7 @@
 * [Quick Sort](./QuickSort.md)
 * [HashTables](./HashTables.md)
 * [repeated word](./repeatedWord.md)
+* [Left Join](./LeftJoin.md)
 
 
 
