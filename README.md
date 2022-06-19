@@ -22,6 +22,6 @@
 * [HashTables](./HashTables.md)
 * [repeated word](./repeatedWord.md)
 * [Left Join](./LeftJoin.md)
-
+* [Tree Intersection](./TreeIntersection.md)
 
 
