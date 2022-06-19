@@ -25,69 +25,58 @@ namespace HashTables
             }
         }
 
-          
-            public static string RepeatedWord(string input)
+
+        public static string RepeatedWord(string input)
+        {
+            string[] words = input.Split(' ');
+
+            HashTable hashtable = new HashTable();
+
+            for (int i = 0; i < words.Length; i++)
             {
-                string[] words = input.Split(' ');
-
-                HashTable hashtable = new HashTable();
-
-                for (int i = 0; i < words.Length; i++)
-                {
                 string word = Regex.Replace(words[i].ToLower(), @"[^\w\d\s]", "");
 
-                    if (hashtable.Contains(word))
-                    {
-                        return hashtable.Get(word).Value;
-                    }
-
-                    hashtable.Set(word, word);
+                if (hashtable.Contains(word))
+                {
+                    return hashtable.Get(word).Value;
                 }
 
-                return "No Repeated Word";
+                hashtable.Set(word, word);
             }
+
+            return "No Repeated Word";
+        }
         public static List<string> LeftJoin(HashTable left, HashTable right)
         {
-            //List to hold join data.
             List<string> joinTable = new List<string>();
 
-            //Stepping through all hashnode is left hash table
             for (int i = 0; i < left.Table.Length; i++)
             {
-                //If the bucket has a hashnode in it
                 if (left.Table[i] != null)
                 {
-                    //Take the first hashnode out of the bucket.
                     Node currentNode = left.Table[i];
 
-                    //Runs until collision storage is null
                     while (currentNode != null)
                     {
-                        //Will hold the data collected from hashnode
                         string concat = null;
-                        //Adds left hashnode key and value
                         concat = concat + $"{currentNode.Key}, {currentNode.Value}, ";
-                        //Checks to see if right hashtable contains matching key
                         if (right.Contains(currentNode.Key))
                         {
-                            // Adds right hashnodes value to concat
                             concat = concat + right.Get(currentNode.Key);
                         }
                         else
                         {
-                            //Adds NULL if right hashtable doesnt have matching key
                             concat += "NULL";
                         }
-                        //Adds saved key value data to list.
                         joinTable.Add(concat);
-                        //Moves to next node in collision storage.
                         currentNode = currentNode.Next;
                     }
                 }
             }
-            //Returns joinTable
+
             return joinTable;
         }
+       
     }
 }
 
