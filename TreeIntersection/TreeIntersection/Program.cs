@@ -54,44 +54,31 @@ namespace TreeIntersection
                     stack1.Push(root1);
                     root1 = root1.left;
                 }
-
-                // push the Nodes of second tree in stack stack2 
                 else if (root2 != null)
                 {
                     stack2.Push(root2);
                     root2 = root2.left;
                 }
 
-                // Both root1 and root2 are NULL here 
                 else if (stack1.Count > 0 && stack2.Count > 0)
                 {
                     root1 = stack1.Peek();
                     root2 = stack2.Peek();
 
-                    // If current keys in two trees are same 
                     if (root1.key == root2.key)
                     {
                         Console.Write(root1.key + " ");
                         stack1.Pop();
                         stack2.Pop();
-
-                        // move to the inorder successor 
                         root1 = root1.right;
                         root2 = root2.right;
                     }
 
                     else if (root1.key < root2.key)
                     {
-                        // If Node of first tree is smaller, than that of 
-                        // second tree, then its obvious that the inorder 
-                        // successors of current Node can have same value 
-                        // as that of the second tree Node. Thus, we pop 
-                        // from stack2 
+                       
                         stack1.Pop();
                         root1 = root1.right;
-
-                        // root2 is set to NULL, because we need 
-                        // new Nodes of tree 1 
                         root2 = null;
                     }
                     else if (root1.key > root2.key)
@@ -101,8 +88,6 @@ namespace TreeIntersection
                         root1 = null;
                     }
                 }
-
-                // Both roots and both stacks are empty 
                 else
                 {
                     break;
@@ -129,13 +114,11 @@ namespace TreeIntersection
         }
         public static Node insert(Node node, int key)
         {
-            /* If the tree is empty, return a new Node */
+            
             if (node == null)
             {
                 return newNode(key);
             }
-
-            /* Otherwise, recur down the tree */
             if (key < node.key)
             {
                 node.left = insert(node.left, key);
@@ -144,8 +127,6 @@ namespace TreeIntersection
             {
                 node.right = insert(node.right, key);
             }
-
-            /* return the (unchanged) Node pointer */
             return node;
         }
     }

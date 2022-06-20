@@ -22,12 +22,14 @@ namespace linkedList
             list1.Insert(50);
             list1.Insert(30);
             list1.Insert(10);
-            List list2 = new List();
-            list2.Insert(40);
-            list2.Insert(20);
 
-            MyList.ZipLists(list1, list2);
-            Console.WriteLine(MyList.Tostring());
+            //list1.kthFromEnd(50);
+            //List list2 = new List();
+            //list2.Insert(40);
+            //list2.Insert(20);
+            list1.InsertBefore(30, 40);
+            //MyList.ZipLists(list1, list2);
+            Console.WriteLine(list1.Tostring());
             Console.ReadLine();
         }
         }
