@@ -23,5 +23,6 @@
 * [repeated word](./repeatedWord.md)
 * [Left Join](./LeftJoin.md)
 * [Tree Intersection](./TreeIntersection.md)
+* [Graph](Graph.md)
 
 
