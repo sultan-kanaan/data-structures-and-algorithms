@@ -49,6 +49,16 @@ namespace Graphs
             {
                 Console.Write($" {node.Value} ");
             }
+            Console.WriteLine();
+
+
+            List<Vertex> path = graph.BreadthFirst(A);
+            Console.Write("Adjecency list of node A: ");
+            foreach (Vertex node in path)
+            {
+                Console.Write($" {node.Value} ");
+            }
+            Console.WriteLine();
 
 
             Console.ReadKey();
