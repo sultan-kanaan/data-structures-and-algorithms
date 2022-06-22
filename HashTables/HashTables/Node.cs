@@ -9,7 +9,7 @@ namespace HashTables
     public class Node
     {
         public string Key { get; set; }
-        public string Value { get; set; }
+        public object Value { get; set; }
         public Node Next { get; set; }
         public int Value1 { get; set; }
         public Node Left { get; set; }
@@ -19,6 +19,7 @@ namespace HashTables
         {
             Key = key;
             Value = value;
+            Next = null;        
         }
 
         public Node(int value)

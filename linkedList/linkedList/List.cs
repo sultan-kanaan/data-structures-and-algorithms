@@ -85,10 +85,7 @@ namespace linkedList
                     Current.Next = NewNode;
                     return;
                 }
-                else
-                {
-                    Current = Current.Next;
-                }
+                Current = Current.Next;
             }
         }
 
@@ -114,10 +111,7 @@ namespace linkedList
                     Current.Next = node;
                     return;
                 }
-                else
-                {
-                    Current = Current.Next;
-                }
+                Current = Current.Next;
             }
 
             if (Current.Date == value)
@@ -148,24 +142,30 @@ namespace linkedList
         {
             Node current = Head;
             int position = 0;
+            Node p = null;
+            Node n = null;
 
             while (current != null)
             {
-                current = current.Next;
-                position++;
+                n = current.Next;
+                current.Next = p;
+                p = current;
+                current = n;
+
 
             }
-            int k = position - 1;
+            Head = p;
+
             current = Head;
             while (current != null)
             {
                 if (current.Date == value)
                 {
-                    Console.WriteLine($"item {value} found at position {k}");
+                    Console.WriteLine($"item {value} found at position {position}");
                     return;
                 }
                 current = current.Next;
-                k--;
+                position++;
                 if (current == null)
                 {
                     Console.WriteLine("Exception");

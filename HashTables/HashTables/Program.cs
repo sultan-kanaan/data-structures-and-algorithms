@@ -46,27 +46,27 @@ namespace HashTables
             }
         }
 
-          
-            public static string RepeatedWord(string input)
+
+        public static string RepeatedWord(string input)
+        {
+            string[] words = input.Split(' ');
+
+            HashTable hashtable = new HashTable();
+
+            for (int i = 0; i < words.Length; i++)
             {
-                string[] words = input.Split(' ');
-
-                HashTable hashtable = new HashTable();
-
-                for (int i = 0; i < words.Length; i++)
-                {
                 string word = Regex.Replace(words[i].ToLower(), @"[^\w\d\s]", "");
 
-                    if (hashtable.Contains(word))
-                    {
-                        return hashtable.Get(word).Value;
-                    }
-
-                    hashtable.Set(word, word);
+                if (hashtable.Contains(word))
+                {
+                    return hashtable.Get(word).Value.ToString();
                 }
 
-                return "No Repeated Word";
+                hashtable.Set(word, word);
             }
+
+            return "No Repeated Word";
+        }
         public static List<string> LeftJoin(HashTable left, HashTable right)
         {
             List<string> joinTable = new List<string>();
@@ -80,10 +80,19 @@ namespace HashTables
                     while (currentNode != null)
                     {
                         string concat = null;
+<<<<<<< HEAD
                         concat = concat + $"{currentNode.Key}, {currentNode.Value}, ";
                         if (right.Contains(currentNode.Key))
                         {
                             concat = concat + right.Get(currentNode.Key);
+=======
+                        concat += $"{currentNode.Key}, {currentNode.Value}, ";
+
+                        if (right.Contains(currentNode.Key))
+                        {
+                            concat += right.Get(currentNode.Key).ToString();
+
+>>>>>>> 0b8e53ba62e1afbfcc3fd6ddc7776fba9f333f57
                         }
                         else
                         {
@@ -94,6 +103,7 @@ namespace HashTables
                     }
                 }
             }
+<<<<<<< HEAD
             return joinTable;
         }
         public static List<int> TreeIntersection(BinaryTree treeOne, BinaryTree treeTwo)
@@ -137,6 +147,12 @@ namespace HashTables
             // Returns list of common values.
             return commonValues;
         }
+=======
+
+            return joinTable;
+        }
+
+>>>>>>> 0b8e53ba62e1afbfcc3fd6ddc7776fba9f333f57
     }
 }
 
