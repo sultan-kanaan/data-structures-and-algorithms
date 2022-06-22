@@ -113,6 +113,24 @@ namespace TestHashTables
 
             Assert.Equal(expected, actual);
         }
+        [Fact]
+        public void TestTreeIntersection()
+        {
+            BinaryTree testTreeOne = new BinaryTree();
+            testTreeOne.Root = new Node(1);
+            testTreeOne.Root.Left = new Node(2);
+            testTreeOne.Root.Right = new Node(3);
+
+            BinaryTree testTreeTwo = new BinaryTree();
+            testTreeTwo.Root = new Node(4);
+            testTreeTwo.Root.Left = new Node(1);
+            testTreeTwo.Root.Right = new Node(2);
+
+            List<int> expected = new List<int> { 1, 2 };
+            List<int> actual = Program.TreeIntersection(testTreeOne, testTreeTwo);
+
+            Assert.Equal(expected, actual);
+        }
 
 
     }

@@ -21,6 +21,27 @@ namespace HashTables
                 Console.WriteLine(RepeatedWord(exampleTwo));
                 Console.WriteLine(RepeatedWord(exampleThree));
 
+                Console.WriteLine();
+                Console.WriteLine();
+
+                BinaryTree testTreeOne = new BinaryTree();
+                testTreeOne.Root = new Node(1);
+                testTreeOne.Root.Left = new Node(2);
+                testTreeOne.Root.Right = new Node(3);
+
+                BinaryTree testTreeTwo = new BinaryTree();
+                testTreeTwo.Root = new Node(4);
+                testTreeTwo.Root.Left = new Node(1);
+                testTreeTwo.Root.Right = new Node(2);
+
+                List<int> values = TreeIntersection(testTreeOne, testTreeTwo);
+
+                Console.WriteLine("Common Values");
+                foreach (int value in values)
+                {
+                    Console.WriteLine($"Value = {value}");
+                }
+
                 Console.ReadKey();
             }
         }
@@ -48,45 +69,73 @@ namespace HashTables
             }
         public static List<string> LeftJoin(HashTable left, HashTable right)
         {
-            //List to hold join data.
             List<string> joinTable = new List<string>();
 
-            //Stepping through all hashnode is left hash table
             for (int i = 0; i < left.Table.Length; i++)
             {
-                //If the bucket has a hashnode in it
                 if (left.Table[i] != null)
                 {
-                    //Take the first hashnode out of the bucket.
                     Node currentNode = left.Table[i];
 
-                    //Runs until collision storage is null
                     while (currentNode != null)
                     {
-                        //Will hold the data collected from hashnode
                         string concat = null;
-                        //Adds left hashnode key and value
                         concat = concat + $"{currentNode.Key}, {currentNode.Value}, ";
-                        //Checks to see if right hashtable contains matching key
                         if (right.Contains(currentNode.Key))
                         {
-                            // Adds right hashnodes value to concat
                             concat = concat + right.Get(currentNode.Key);
                         }
                         else
                         {
-                            //Adds NULL if right hashtable doesnt have matching key
                             concat += "NULL";
                         }
-                        //Adds saved key value data to list.
                         joinTable.Add(concat);
-                        //Moves to next node in collision storage.
                         currentNode = currentNode.Next;
                     }
                 }
             }
-            //Returns joinTable
             return joinTable;
+        }
+        public static List<int> TreeIntersection(BinaryTree treeOne, BinaryTree treeTwo)
+        {
+
+            List<int> commonValues = new List<int>();
+            HashTable visitedValues = new HashTable();
+
+            // Traverses first tree and adds values to hashmap.
+            void TraversalOne(Node root)
+            {
+                if (root == null)
+                {
+                    return;
+                }
+
+                visitedValues.Set(root.Value1.ToString(), null);
+                TraversalOne(root.Left);
+                TraversalOne(root.Right);
+            }
+
+            // Traverses second tree and adds values to list if value is contained within hashmap.
+            void TraversalTwo(Node root)
+            {
+                if (root == null)
+                {
+                    return;
+                }
+                if (visitedValues.Contains(root.Value1.ToString()))
+                {
+                    commonValues.Add(root.Value1);
+                }
+                TraversalTwo(root.Left);
+                TraversalTwo(root.Right);
+            }
+
+            // Fires both recursive methods.
+            TraversalOne(treeOne.Root);
+            TraversalTwo(treeTwo.Root);
+
+            // Returns list of common values.
+            return commonValues;
         }
     }
 }
