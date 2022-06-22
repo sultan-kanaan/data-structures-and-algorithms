@@ -90,19 +90,24 @@ namespace TestHashTables
             Assert.Equal("No Repeated Word", Program.RepeatedWord(testPhrase));
         }
         [Fact]
-        public void TestLeftJoin()
+        public void TestingWithNoRightData()
         {
             HashTable left = new HashTable();
-            left.Set("sultan", "250");
-            left.Set("kanaan", "250");
+            left.Set("sultan", "First");
+            left.Set("kanaan", "First");
+            left.Set("salman", "World");
+            left.Set("aws", "Hello");
 
             HashTable right = new HashTable();
-            right.Set("sultan", "400");
-            right.Set("salman", "400");
 
             List<string> expected = new List<string>();
-            expected.Add("kanaan, 250, NULL");
-            expected.Add("sultan, 250, HashTables.Node");
+            expected.Add("kanaan, First, NULL");
+            expected.Add("aws, Hello, NULL");
+            expected.Add("sultan, First, NULL");
+            expected.Add("salman, World, NULL");
+
+
+
 
             List<string> actual = Program.LeftJoin(left, right);
 
