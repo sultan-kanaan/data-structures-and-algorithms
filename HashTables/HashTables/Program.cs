@@ -80,30 +80,26 @@ namespace HashTables
                     while (currentNode != null)
                     {
                         string concat = null;
-<<<<<<< HEAD
                         concat = concat + $"{currentNode.Key}, {currentNode.Value}, ";
                         if (right.Contains(currentNode.Key))
                         {
                             concat = concat + right.Get(currentNode.Key);
-=======
-                        concat += $"{currentNode.Key}, {currentNode.Value}, ";
 
-                        if (right.Contains(currentNode.Key))
-                        {
-                            concat += right.Get(currentNode.Key).ToString();
+                            if (right.Contains(currentNode.Key))
+                            {
+                                concat += right.Get(currentNode.Key).ToString();
 
->>>>>>> 0b8e53ba62e1afbfcc3fd6ddc7776fba9f333f57
+                            }
+                            else
+                            {
+                                concat += "NULL";
+                            }
+                            joinTable.Add(concat);
+                            currentNode = currentNode.Next;
                         }
-                        else
-                        {
-                            concat += "NULL";
-                        }
-                        joinTable.Add(concat);
-                        currentNode = currentNode.Next;
                     }
                 }
             }
-<<<<<<< HEAD
             return joinTable;
         }
         public static List<int> TreeIntersection(BinaryTree treeOne, BinaryTree treeTwo)
@@ -112,7 +108,6 @@ namespace HashTables
             List<int> commonValues = new List<int>();
             HashTable visitedValues = new HashTable();
 
-            // Traverses first tree and adds values to hashmap.
             void TraversalOne(Node root)
             {
                 if (root == null)
@@ -125,7 +120,6 @@ namespace HashTables
                 TraversalOne(root.Right);
             }
 
-            // Traverses second tree and adds values to list if value is contained within hashmap.
             void TraversalTwo(Node root)
             {
                 if (root == null)
@@ -140,19 +134,13 @@ namespace HashTables
                 TraversalTwo(root.Right);
             }
 
-            // Fires both recursive methods.
             TraversalOne(treeOne.Root);
             TraversalTwo(treeTwo.Root);
 
-            // Returns list of common values.
             return commonValues;
         }
-=======
 
-            return joinTable;
-        }
-
->>>>>>> 0b8e53ba62e1afbfcc3fd6ddc7776fba9f333f57
     }
 }
+
 
