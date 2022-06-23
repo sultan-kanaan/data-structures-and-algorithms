@@ -80,23 +80,17 @@ namespace HashTables
                     while (currentNode != null)
                     {
                         string concat = null;
-                        concat = concat + $"{currentNode.Key}, {currentNode.Value}, ";
+                        concat +=  $"{currentNode.Key}, {currentNode.Value}, ";
                         if (right.Contains(currentNode.Key))
                         {
-                            concat = concat + right.Get(currentNode.Key);
-
-                            if (right.Contains(currentNode.Key))
-                            {
-                                concat += right.Get(currentNode.Key).ToString();
-
-                            }
-                            else
-                            {
-                                concat += "NULL";
-                            }
-                            joinTable.Add(concat);
-                            currentNode = currentNode.Next;
+                            concat +=  right.Get(currentNode.Key);
                         }
+                        else
+                        {
+                            concat +=  "NULL";
+                        }
+                        joinTable.Add(concat);
+                        currentNode = currentNode.Next;
                     }
                 }
             }
