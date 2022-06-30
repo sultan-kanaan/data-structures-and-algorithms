@@ -146,5 +146,31 @@ namespace TestGraph
 
             Assert.Equal(expected, result);
         }
+        [Fact]
+        public void BusinessTriptest()
+        {
+            Graph graph = new Graph();
+            graph.AddNode("Houston");
+            graph.AddNode("Seattle");
+            graph.AddNode("Los Angeles");
+            graph.AddNode("Cookeville");
+            graph.AddNode("Riverside");
+            Vertex A = new Vertex("Houston");
+            Vertex B = new Vertex("Seattle");
+            Vertex C = new Vertex("Los Angeles");
+            Vertex D = new Vertex("Cookeville");
+            Vertex E = new Vertex("Riverside");
+            graph.AddEdge(A, B, 50);
+            graph.AddEdge(A, C, 32);
+            graph.AddEdge(B, C, 110);
+            graph.AddEdge(C, D, 99);
+            graph.AddEdge(C, E, 159);
+            graph.AddEdge(D, E, 75);
+            string[] cities = { "Houston", "Seattle", "Los Angeles" };
+            var result = Program.BusinessTrip(graph, cities);
+            var expected = 160;
+
+            Assert.Equal(expected, result);
+        }
     }
 }
